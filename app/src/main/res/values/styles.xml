@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="coin_card_view_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginHorizontal">3dp</item>
+        <item name="android:padding">@dimen/standard_cv_padding</item>
+    </style>
+
+    <style name="coin_cv_image_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/coin_cv_view_margin</item>
+        <item name="android:padding">@dimen/standard_cv_padding</item>
+    </style>
+
+    <style name="coin_cv_et_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/coin_cv_view_margin</item>
+        <item name="android:inputType">number</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+
+</resources>
