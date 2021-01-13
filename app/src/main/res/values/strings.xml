@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Coin Counter</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_clear">Clear All</string>
+    <string name="main_banner_text">Please enter in the coin count:</string>
+    <string name="name">JR</string>
+    <string name="about">About</string>
+    <string name="about_text">Made by JR for the MCON 521 Final Exam</string>
+    <string name="status_bar_text">Total in cents:</string>
 </resources>

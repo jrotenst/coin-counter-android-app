@@ -5,15 +5,146 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <fragment
-        android:id="@+id/nav_host_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:defaultNavHost="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/nav_graph" />
+    <!-- banner CardView -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/banner_cv"
+        android:layout_width="@dimen/banner_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/banner_margin_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/banner_card_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingHorizontal="@dimen/banner_tv_horizontal_padding"
+            android:paddingVertical="@dimen/banner_tv_vertical_padding"
+            android:text="@string/main_banner_text"
+            android:textAllCaps="true"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- coin CardViews -->
+
+    <!-- penny -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/penny_cv"
+        style="@style/coin_card_view_style"
+        app:layout_constraintEnd_toStartOf="@id/nickel_cv"
+        app:layout_constraintStart_toStartOf="@id/banner_cv"
+        app:layout_constraintTop_toBottomOf="@id/banner_cv">
+
+        <LinearLayout
+            android:id="@+id/penny_cv_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/penny_cv_image"
+                style="@style/coin_cv_image_style"
+                android:src="@drawable/penny" />
+
+            <EditText
+                android:id="@+id/penny_cv_et"
+                style="@style/coin_cv_et_style"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- nickel -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/nickel_cv"
+        style="@style/coin_card_view_style"
+        app:layout_constraintEnd_toStartOf="@id/dime_cv"
+        app:layout_constraintStart_toEndOf="@id/penny_cv"
+        app:layout_constraintTop_toBottomOf="@id/banner_cv">
+
+        <LinearLayout
+            android:id="@+id/nickel_cv_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/nickel_cv_image"
+                style="@style/coin_cv_image_style"
+                android:src="@drawable/nickel" />
+
+            <EditText
+                android:id="@+id/nickel_cv_et"
+                style="@style/coin_cv_et_style"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- dime -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dime_cv"
+        style="@style/coin_card_view_style"
+        app:layout_constraintEnd_toStartOf="@id/quarter_cv"
+        app:layout_constraintStart_toEndOf="@id/nickel_cv"
+        app:layout_constraintTop_toBottomOf="@id/banner_cv">
+
+        <LinearLayout
+            android:id="@+id/dime_cv_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/dime_cv_image"
+                style="@style/coin_cv_image_style"
+                android:src="@drawable/dime" />
+
+            <EditText
+                android:id="@+id/dime_cv_et"
+                style="@style/coin_cv_et_style" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- quarter -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/quarter_cv"
+        style="@style/coin_card_view_style"
+        app:layout_constraintEnd_toEndOf="@id/banner_cv"
+        app:layout_constraintStart_toEndOf="@id/dime_cv"
+        app:layout_constraintTop_toBottomOf="@id/banner_cv">
+
+        <LinearLayout
+            android:id="@+id/quarter_cv_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/quarter_cv_image"
+                style="@style/coin_cv_image_style"
+                android:src="@drawable/quarter" />
+
+            <EditText
+                android:id="@+id/quarter_cv_et"
+                style="@style/coin_cv_et_style" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- status bar TextView -->
+
+    <TextView
+        android:id="@+id/status_bar_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?colorPrimaryVariant"
+        android:padding="@dimen/status_bar_tv_padding"
+        android:text="@string/name"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
